@@ -1,0 +1,880 @@
+* {
+  margin: 0;
+  padding: 0%;
+  font-family: "Poppins", sans-serif;
+}
+
+#banner {
+  background: linear-gradient(rgba(0, 0, 0.2, 0.2), #250029),
+    url(photo/banner2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+/*nito*/
+.container_slider_css {
+  margin: 50px auto;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+}
+.photo_slider_css {
+  position: absolute;
+  animation: round 16s infinite;
+  opacity: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+img:nth-child(1) {
+  animation-delay: 12s;
+}
+img:nth-child(2) {
+  animation-delay: 8s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 0;
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .container_slider_css {
+    width: 80%;
+    height: 190px;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  .container_slider_css {
+    width: 80%;
+    height: 190px;
+  }
+}
+
+/*.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+}*/
+
+.banner-text {
+  text-align: center;
+  color: white;
+  padding: 180px;
+}
+.banner-text h1 {
+  font-size: 130px;
+  font-family: "Kaushan Script", cursive;
+}
+.banner-text p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.banner-btn {
+  margin: 70px auto 0;
+}
+
+.banner-btn a {
+  width: 150;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: white;
+  border: 0.5px solid white;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+  border-radius: 8px;
+}
+
+.banner-btn a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+  transition: 0.5s;
+  border-radius: 8px;
+}
+.banner-btn a:hover span {
+  width: 100%;
+}
+.banner-btn a:hover {
+  color: black;
+}
+#sideNav {
+  width: 160px;
+  height: 100vh;
+  position: fixed;
+  right: -160px;
+  top: 0;
+  background: #250029;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 50px 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+#menuBtn {
+  width: 30px;
+  height: 30px;
+  background: #250029;
+  text-align: center;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  border-radius: 15px;
+  z-index: 3;
+  cursor: pointer;
+}
+#menuBtn img {
+  width: 30px;
+  margin-top: 0px;
+  border-radius: 15px;
+}
+/* ===================== */
+/* Features Section      */
+/* ===================== */
+#feature {
+  width: 100%;
+  padding: 70px 20px; /* паддинг с боков для маленьких экранов */
+  background: #fff;
+}
+
+.title-text {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.title-text p {
+  font-size: 18px;
+  color: #250029;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+.title-text p::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: linear-gradient(#250029, #fff);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+
+.title-text h1 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+/* Контейнер для текста + картинки */
+.feature-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* расстояние между блоками */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  flex: 1 1 400px; /* гибкий блок текста */
+  text-align: left;
+}
+
+.features h1 {
+  color: #250029;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.features hr.sh {
+  height: 2px;
+  background: black;
+  border: none;
+  margin: 10px 0;
+  width: 50px;
+}
+
+.features p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.features p:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* Блок картинки */
+.features-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.features-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.features-img:hover {
+  transform: translateY(-10px);
+}
+
+/* ===================== */
+/* Адаптивность          */
+/* ===================== */
+@media (max-width: 1024px) {
+  .feature-box {
+    gap: 30px;
+  }
+  .features-img img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-box {
+    flex-direction: column-reverse; /* картинка сверху или снизу */
+    align-items: center;
+  }
+  .features {
+    text-align: center;
+  }
+  .features-img img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-text h1 {
+    font-size: 2rem;
+  }
+  .title-text p {
+    font-size: 16px;
+  }
+  .features h1 {
+    font-size: 1.5rem;
+  }
+  .features p {
+    font-size: 0.95rem;
+  }
+  .features-img img {
+    max-width: 250px;
+  }
+}
+
+/* SERVICES */
+#service {
+  width: 88.9%;
+  padding: 70px;
+  background: #efefef;
+}
+
+.service-box {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.single-service {
+  flex-basis: 48px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+.single-service img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #250029);
+  opacity: 0;
+  transition: 1s;
+}
+
+.single-service:hover .overlay {
+  opacity: 1;
+}
+
+.service-description {
+  width: 80%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transform: 1s;
+}
+
+.single-service:hover .service-description {
+  bottom: 20%;
+  opacity: 1;
+}
+hr {
+  background: white;
+  height: 2px;
+  border: 0;
+  margin: 14px auto;
+  width: 60%;
+}
+
+.single-service p {
+  font-size: 14px;
+}
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+/*TESTIMONIAL*/
+
+#testimonial {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.testimonial-row {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.testimonial-col {
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.testimonial-col p {
+  font-size: 14px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user img {
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 100%;
+}
+
+.testimonial-col:hover {
+  transform: translateY(-20px);
+}
+
+/* footer*/
+#footer {
+  padding: 100px 20px 0;
+  background: #efefef;
+}
+
+.footer-row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.footer-left,
+.footer-right {
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer-right {
+  text-align: right;
+}
+.footer-row h1 {
+  margin: 10px 0;
+}
+.footer-row p {
+  line-height: 35px;
+}
+
+.copyright {
+  text-shadow: cornflowerblue;
+  text-align: center;
+  padding: 10px;
+}
+/* chat*/
+.holder-html-chat {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  width: 600px;
+}
+.html-chat-history {
+  max-width: 600px;
+  overflow: auto;
+  max-height: 900px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.html-chat-js-name {
+  margin-top: 10px;
+}
+
+.html-chat-js-input {
+  max-width: 600px;
+  max-height: 100px;
+  width: 600px;
+  margin-top: 10px;
+}
+.html-chat-js-button-holder {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.html-chat-js-button-holder input {
+  width: 220px;
+}
+.html-chat-js-answer {
+  float: right;
+}
+.html-chat-js-answer a {
+  color: #777;
+  font-size: 12px;
+  font-family: cursive;
+}
+.html-chat-js-answer a:hover {
+  color: #338;
+  font-size: 12px;
+  font-family: cursive;
+}
+.html-chat-msg {
+  margin: 0px;
+}
+
+/* ======================= */
+/*  Общие стили            */
+/* ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #222;
+}
+
+/* ======================= */
+/*  Баннер / Hero           */
+/* ======================= */
+#banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #250029),
+    url(photo/banner2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1 {
+  font-size: 5rem;
+  font-family: "Kaushan Script", cursive;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* ======================= */
+/*  Слайдер                */
+/* ======================= */
+.slider-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  color: #222;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hair-slider {
+  width: 90%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto 60px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  background-color: #000;
+}
+
+.hair-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* Голова человека сверху */
+  opacity: 0;
+  animation: hairSlider 20s infinite;
+  transition: transform 0.8s ease;
+}
+
+/* Задержка для каждого слайда */
+.hair-slide:nth-child(2) {
+  animation-delay: 5s;
+}
+.hair-slide:nth-child(3) {
+  animation-delay: 10s;
+}
+.hair-slide:nth-child(4) {
+  animation-delay: 15s;
+}
+
+/* Анимация слайдов */
+@keyframes hairSlider {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ======================= */
+/*  Боковое меню           */
+/* ======================= */
+#sideNav {
+  width: 160px;
+  height: 100vh;
+  position: fixed;
+  right: -160px;
+  top: 0;
+  background: #250029;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+#menuBtn {
+  width: 30px;
+  height: 30px;
+  background: #250029;
+  text-align: center;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  border-radius: 15px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#menuBtn img {
+  width: 30px;
+  border-radius: 15px;
+}
+
+/* ======================= */
+/*  Features / Услуги       */
+/* ======================= */
+#feature,
+#service,
+#testimonial {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.title-text {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.title-text p {
+  font-size: 20px;
+  color: #250029;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.title-text p::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: linear-gradient(#250029, #fff);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+
+.title-text h1 {
+  font-size: 2.8rem;
+}
+
+/* ======================= */
+/*  Сервисы                */
+/* ======================= */
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.single-service {
+  flex-basis: 300px;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.5s ease;
+}
+
+.single-service img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #250029);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.single-service:hover .overlay {
+  opacity: 1;
+}
+
+.service-description {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s;
+}
+
+.single-service:hover .service-description {
+  bottom: 20%;
+  opacity: 1;
+}
+
+/* ======================= */
+/*  Тестимониалы           */
+/* ======================= */
+.testimonial-row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonial-col {
+  flex-basis: 28%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.testimonial-col:hover {
+  transform: translateY(-20px);
+}
+
+.user img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ======================= */
+/*  Footer                 */
+/* ======================= */
+#footer {
+  padding: 100px 20px 50px;
+  background: #efefef;
+}
+
+.footer-row {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left,
+.footer-right {
+  flex-basis: 45%;
+}
+
+/* ======================= */
+/*  Адаптивность           */
+/* ======================= */
+@media (max-width: 1200px) {
+  .hair-slider {
+    height: 450px;
+  }
+  .slider-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hair-slider {
+    height: 400px;
+  }
+  .slider-title {
+    font-size: 2rem;
+  }
+  .testimonial-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hair-slider {
+    height: 300px;
+  }
+  .slider-title {
+    font-size: 1.6rem;
+  }
+  .banner-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hair-slider {
+    height: 250px;
+  }
+  .slider-title {
+    font-size: 1.4rem;
+  }
+  .banner-text h1 {
+    font-size: 2.2rem;
+  }
+}
